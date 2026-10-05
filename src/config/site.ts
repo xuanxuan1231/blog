@@ -9,14 +9,14 @@ const artalkEnabled =
 const site = {
   // --- Site Metadata ---
   meta: {
-    title: "Breeze",
-    description: "A minimal Astro theme for personal websites",
-    author: "Your Name",
+    title: "HelloSWX",
+    description: "摆专爱国荣校 No.2 & 业余开发者",
+    author: "Wenxuan Shen",
     logo: "/logo.svg",
     ogImage: "/og-image.png",
     // HTML lang attribute, affects page language and date formatting
     // Options: "zh-CN", "en", "ja", etc.
-    lang: "en",
+    lang: "zh-CN",
   },
 
   // --- Navigation ---
@@ -31,8 +31,12 @@ const site = {
 
   // --- Social Links ---
   social: [
-    { name: "GitHub", href: "https://github.com/your-username", icon: "mdi:github" },
-    { name: "Email", href: "mailto:hello@example.com", icon: "mdi:email" },
+    {
+      name: "GitHub",
+      href: "https://github.com/xuanxuan1231",
+      icon: "mdi:github",
+    },
+    { name: "Email", href: "mailto:i@helloswx.top", icon: "mdi:email" },
   ],
 
   friendCard: {
@@ -44,19 +48,18 @@ const site = {
 
   // --- Homepage Hero ---
   hero: {
-    greeting: "👋 Hello, I'm Breeze",
+    greeting: "👋 Hi, I'm HelloSWX",
     // Supports HTML. Use <span class="font-medium text-foreground underline decoration-primary/30"> to highlight keywords
-    description:
-      'A minimal personal website theme built with <span class="font-medium text-foreground underline decoration-primary/30">Astro</span> and <span class="font-medium text-foreground underline decoration-primary/30">Tailwind CSS</span>.',
+    description: "每天在海淀黄庄环形通勤的高中牲",
     cards: [
-      { icon: "mdi:explore", label: "Status", value: "Building something cool" },
-      { icon: "mdi:location", label: "Location", value: "Earth" },
+      { icon: "mdi:explore", label: "Status", value: "Coding, Meowing" },
+      { icon: "mdi:location", label: "Location", value: "The Universe" },
     ],
   },
 
   // --- Footer ---
   footer: {
-    copyright: "© 2025 Breeze",
+    copyright: "© 2026 HelloSWX",
     builtWith: "Built with Astro",
   },
 
@@ -83,31 +86,63 @@ const site = {
     {
       name: "development",
       items: [
-        { name: "VS Code", link: "https://code.visualstudio.com", icon: "mdi:microsoft-visual-studio-code" },
-        { name: "WebStorm", link: "https://www.jetbrains.com/webstorm", icon: "mdi:code-braces" },
+        {
+          name: "VS Code",
+          link: "https://code.visualstudio.com",
+          icon: "mdi:microsoft-visual-studio-code",
+        },
+        {
+          name: "WebStorm",
+          link: "https://www.jetbrains.com/webstorm",
+          icon: "mdi:code-braces",
+        },
         { name: "Terminal", icon: "mdi:terminal" },
         { name: "Git", link: "https://git-scm.com", icon: "mdi:git" },
         { name: "Docker", link: "https://www.docker.com", icon: "mdi:docker" },
         { name: "Postman", link: "https://www.postman.com", icon: "mdi:api" },
-      ]
+      ],
     },
     {
       name: "design",
       items: [
-        { name: "Figma", link: "https://www.figma.com", icon: "mdi:vector-polygon" },
-        { name: "Sketch", link: "https://www.sketch.com", icon: "mdi:vector-square" },
-        { name: "Adobe XD", link: "https://www.adobe.com/products/xd.html", icon: "mdi:pencil-ruler" },
-        { name: "Photoshop", link: "https://www.adobe.com/products/photoshop.html", icon: "mdi:image-edit" },
-      ]
+        {
+          name: "Figma",
+          link: "https://www.figma.com",
+          icon: "mdi:vector-polygon",
+        },
+        {
+          name: "Sketch",
+          link: "https://www.sketch.com",
+          icon: "mdi:vector-square",
+        },
+        {
+          name: "Adobe XD",
+          link: "https://www.adobe.com/products/xd.html",
+          icon: "mdi:pencil-ruler",
+        },
+        {
+          name: "Photoshop",
+          link: "https://www.adobe.com/products/photoshop.html",
+          icon: "mdi:image-edit",
+        },
+      ],
     },
     {
       name: "productivity",
       items: [
         { name: "Notion", link: "https://www.notion.so", icon: "mdi:notebook" },
-        { name: "Obsidian", link: "https://obsidian.md", icon: "mdi:diamond-stone" },
-        { name: "Raycast", link: "https://www.raycast.com", icon: "mdi:lightning-bolt" },
+        {
+          name: "Obsidian",
+          link: "https://obsidian.md",
+          icon: "mdi:diamond-stone",
+        },
+        {
+          name: "Raycast",
+          link: "https://www.raycast.com",
+          icon: "mdi:lightning-bolt",
+        },
         { name: "Arc Browser", link: "https://arc.net", icon: "mdi:web" },
-      ]
+      ],
     },
   ],
 
@@ -115,18 +150,19 @@ const site = {
   // Customize these values to change the text displayed on pages
   labels: {
     postsTitle: "Writing",
-    postsDescription: "Notes, thoughts, and technical musings",
+    postsDescription: "小笔记，小想法",
     projectsTitle: "Projects",
-    projectsDescription: "Small tools built for fun or to solve real problems.",
+    projectsDescription: "有些是自己的，有些是和别人一起的",
     friendsTitle: "Friends",
-    friendsDescription: "Like-minded folks around the web.",
+    friendsDescription: "都哥们",
     toolsTitle: "Stack",
     aboutTitle: "About",
-    aboutDescription: "About this site and its author",
+    aboutDescription: "我就是我",
     backToPosts: "Back to posts",
     goHome: "Go Home",
     notFoundTitle: "Page not found",
-    notFoundDescription: "The page you're looking for may have been removed or the link is broken.",
+    notFoundDescription:
+      "The page you're looking for may have been removed or the link is broken.",
     endOfPost: "End of Post",
     tableOfContents: "Table of Contents",
     searchPlaceholder: "Search posts, tags, or commands...",

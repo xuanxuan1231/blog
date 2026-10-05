@@ -1,25 +1,26 @@
 [
   {
-    "name": "Technology",
+    "name": "技术",
     "slug": "technology",
-    "description": "Articles about web development and programming",
+    "description": "开发日常",
     "icon": "mdi:code-tags"
   },
   {
-    "name": "Design",
-    "slug": "design",
-    "description": "Thoughts on UI/UX and visual design",
-    "icon": "mdi:palette"
+    "name": "摆专",
+    "slug": "bdfz",
+    "description": "记录一些你专的神人神事",
+    "icon": "mdi:town-hall"
   },
   {
-    "name": "Life",
+    "name": "生活",
     "slug": "life",
-    "description": "Daily life and personal reflections",
+    "description": "活下去",
     "icon": "mdi:coffee"
   },
   {
-    "name": "Uncategorized",
+    "name": "未分类",
     "slug": "uncategorized",
+    "description": "我也不知道这是什么，那就放在这里吧",
     "icon": "mdi:folder"
   }
 ]

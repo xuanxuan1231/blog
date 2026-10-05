@@ -1,26 +1,15 @@
 ---
-title: About
-description: About this site and its author
+title: 关于我
+description: 我就是我
 ---
 
-## About Me
+## 关于我
 
-Hello! I'm a developer who loves building things for the web.
+👋 你好呀，我是一个高中牲，平时 ~~闲的没事干~~ 写写代码。
 
-I created this site using [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com), and I'm sharing it as a theme called **Breeze** so others can use it too.
+这个 Blog 使用了 Astro，使用了 **[Breeze](https://github.com/linftyz/astro-theme-breeze)** 主题。  
+我觉得这个字体真的碉堡了（
 
-## Tech Stack
+目前我会一些 Python，并且正在学 Kotlin。
 
-- Astro + Tailwind CSS
-- TypeScript
-- Markdown / MDX
-
-## What I Write About
-
-- Web development tips and tutorials
-- Tools and workflows I find useful
-- Thoughts on technology and design
-
-## Contact
-
-Feel free to reach out through the social links below.
+如果有人想跟我聊天的话……欢迎 ↓
