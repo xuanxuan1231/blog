@@ -1,8 +1,8 @@
 ---
 title: B...B...BBlooooog!
-createdAt: 2026-10-05
+createdAt: 2026-10-05T20:00:00+0800
 category: technology
-tags: [astro, tailwindcss]
+tags: [blog]
 summary: 饿啊终于有 Blog 了，正在驯服中……
 ---
 

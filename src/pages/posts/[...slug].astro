@@ -82,18 +82,16 @@ const tags = (await getEntries(post.data.tags)).filter((value) => value);
 
           <div class="flex items-center gap-1.5">
             <span
-              class="artalk-pv-count"
-              data-page-key={Astro.url.pathname}
-              class="font-bold text-foreground/80">-</span
+              class="pv-count font-bold text-foreground/80"
+              data-page-key={Astro.url.pathname}>-</span
             >
             <span class="text-[10px] uppercase opacity-90">Views</span>
           </div>
 
           <div class="flex items-center gap-1.5">
             <span
-              class="artalk-comment-count"
-              data-page-key={Astro.url.pathname}
-              class="font-bold text-foreground/80">-</span
+              class="giscus-comment-count font-bold text-foreground/80"
+              data-page-key={Astro.url.pathname}>-</span
             >
             <span class="text-[10px] uppercase opacity-90">Comments</span>
           </div>
@@ -147,7 +145,8 @@ const tags = (await getEntries(post.data.tags)).filter((value) => value);
       >
         <span class="transition-transform group-hover:-translate-x-1">
           <Icon name="mdi:arrow-left" size={14} />
-        </span> {site.labels.backToPosts}
+        </span>
+        {site.labels.backToPosts}
       </a>
       <div
         class="font-mono text-[10px] tracking-widest text-muted-foreground/30 uppercase"
@@ -168,8 +167,8 @@ const tags = (await getEntries(post.data.tags)).filter((value) => value);
   }
 
   .post-words-count,
-  .artalk-pv-count,
-  .artalk-comment-count {
+  .pv-count,
+  .giscus-comment-count {
     color: var(--primary);
     font-weight: 400;
     opacity: 0.8;

@@ -13,7 +13,7 @@ Built with [Astro 5](https://astro.build), [Tailwind CSS v4](https://tailwindcss
 - Dark / Light mode with smooth toggle
 - Full-text search (Pagefind, Cmd+K)
 - RSS feed and sitemap
-- Artalk comments (optional)
+- giscus comments (powered by GitHub Discussions, optional)
 - Umami analytics (optional)
 - Content collections (posts, projects, categories, tags, friends)
 - Table of contents for posts
@@ -50,7 +50,7 @@ All site configuration is in `src/config/site.ts`. This is the only file you nee
 | `social`     | Social links (GitHub, Email, etc.)              |
 | `hero`       | Homepage greeting, description, info cards      |
 | `footer`     | Copyright and credit text                       |
-| `comments`   | Artalk comments configuration                   |
+| `comments`   | giscus comments configuration                   |
 | `features`   | Toggle search, RSS                              |
 | `tools`      | Tools/Stack page data                           |
 | `labels`     | All UI text labels (for i18n)                   |
@@ -101,15 +101,16 @@ To change the color palette, find-and-replace the hue number:
 - `330` = Rose Pink
 - `30` = Warm Orange
 
-## Comments (Artalk)
+## Comments (giscus)
 
-1. Set up an [Artalk](https://artalk.js.org) server
-2. Copy `.env.example` to `.env`
-3. Set `PUBLIC_ARTALK_SERVER=https://your-artalk-server`
-4. Optionally set `PUBLIC_ARTALK_ENABLED=true` or `false` to force enable/disable
+Comments are powered by [giscus](https://giscus.app), with all data stored in GitHub Discussions.
 
-These variables are declared in `astro.config.mjs` via `env.schema`, so Astro provides typed access automatically.
-On Cloudflare Pages, just add `PUBLIC_ARTALK_SERVER` in your project environment variables. No code change is required in `src/config/site.ts`.
+1. Make the repository public, [enable Discussions](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions-for-a-repository), and install the [giscus app](https://github.com/apps/giscus)
+2. Configure your repository at [giscus.app](https://giscus.app) and copy the generated `data-*` attributes
+3. Fill them into `comments.giscus` in `src/config/site.ts` (`repo`, `repoId`, `category`, `categoryId`, and the optional settings)
+4. Set `comments.enabled = false` to turn comments off
+
+While the required fields are empty, the comment section stays hidden (a hint is shown in dev mode).
 
 ## Analytics (Umami)
 

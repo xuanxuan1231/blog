@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+### Changed
+
+- Replace the Artalk comment system with [giscus](https://giscus.app). Configure it in `comments.giscus` in `src/config/site.ts`; `PUBLIC_ARTALK_SERVER` / `PUBLIC_ARTALK_ENABLED` are no longer used.
+
 ## 1.1.0 - 2026-04-05
 
 ### Added
