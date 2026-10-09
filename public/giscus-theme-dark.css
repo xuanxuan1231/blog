@@ -1,0 +1,132 @@
+/*!
+ * Custom giscus theme for this blog — dark mode ("Deep Moss").
+ *
+ * Derived from GitHub's Dark theme, licensed under the MIT License.
+ * Copyright (c) 2018 GitHub Inc.
+ * https://github.com/primer/primitives/blob/main/LICENSE
+ *
+ * Neutral / accent colors mirror `src/styles/theme.css` (hue 165 / 160).
+ * When you change the theme hue there (find-and-replace), replace it here too.
+ *
+ *   --foreground       -> --color-fg-default
+ *   --muted-foreground -> --color-fg-muted
+ *   --background       -> --color-canvas-default
+ *   --card             -> --color-canvas-overlay
+ *   --muted            -> --color-btn-bg
+ *   --border           -> --color-border-default
+ *   --primary          -> --color-accent-* / --color-btn-primary-bg
+ *   --primary-foreground -> --color-btn-primary-text
+ */
+
+main {
+  color-scheme: dark;
+
+  /* --- Syntax highlighting (GitHub Dark, unchanged) --- */
+  --color-prettylights-syntax-comment: #8b949e;
+  --color-prettylights-syntax-constant: #79c0ff;
+  --color-prettylights-syntax-entity: #d2a8ff;
+  --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+  --color-prettylights-syntax-entity-tag: #7ee787;
+  --color-prettylights-syntax-keyword: #ff7b72;
+  --color-prettylights-syntax-string: #a5d6ff;
+  --color-prettylights-syntax-variable: #ffa657;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+  --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+  --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+  --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+  --color-prettylights-syntax-carriage-return-bg: #b62324;
+  --color-prettylights-syntax-string-regexp: #7ee787;
+  --color-prettylights-syntax-markup-list: #f2cc60;
+  --color-prettylights-syntax-markup-heading: #1f6feb;
+  --color-prettylights-syntax-markup-italic: #c9d1d9;
+  --color-prettylights-syntax-markup-bold: #c9d1d9;
+  --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+  --color-prettylights-syntax-markup-deleted-bg: #67060c;
+  --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+  --color-prettylights-syntax-markup-inserted-bg: #033a16;
+  --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+  --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+  --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+  --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+  --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+  --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+  --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+
+  /* --- Text & canvas --- */
+  --color-fg-default: oklch(0.92 0.005 165); /* --foreground */
+  --color-fg-muted: oklch(0.75 0.015 165); /* --muted-foreground */
+  --color-fg-subtle: oklch(0.6 0.015 165);
+  --color-canvas-default: oklch(0.14 0.02 165); /* --background */
+  --color-canvas-overlay: oklch(0.18 0.02 165); /* --card */
+  --color-canvas-inset: oklch(0.11 0.02 165);
+  --color-canvas-subtle: oklch(0.18 0.02 165); /* --card */
+  --color-border-default: oklch(0.26 0.02 165); /* --border */
+  --color-border-muted: oklch(0.22 0.02 165);
+  --color-neutral-muted: oklch(0.75 0.15 160 / 0.12); /* like bg-primary/15 */
+
+  /* --- Accent --- */
+  --color-accent-fg: oklch(0.75 0.15 160); /* --primary */
+  --color-accent-emphasis: oklch(0.75 0.15 160);
+  --color-accent-muted: oklch(0.75 0.15 160 / 0.4);
+  --color-accent-subtle: oklch(0.75 0.15 160 / 0.12);
+
+  /* --- Buttons --- */
+  --color-btn-text: oklch(0.92 0.005 165);
+  --color-btn-bg: oklch(0.24 0.02 165);
+  --color-btn-border: oklch(0.92 0.005 165 / 0.12);
+  --color-btn-shadow: 0 0 #0000;
+  --color-btn-inset-shadow: 0 0 #0000;
+  --color-btn-hover-bg: oklch(0.3 0.02 165);
+  --color-btn-hover-border: oklch(0.92 0.005 165 / 0.2);
+  --color-btn-active-bg: oklch(0.27 0.02 165);
+  --color-btn-active-border: oklch(0.92 0.005 165 / 0.2);
+  --color-btn-selected-bg: oklch(0.2 0.02 165);
+
+  /* --- Primary buttons --- */
+  --color-btn-primary-text: oklch(0.1 0.02 165); /* --primary-foreground */
+  --color-btn-primary-bg: oklch(0.75 0.15 160); /* --primary */
+  --color-btn-primary-border: oklch(0.1 0.02 165 / 0.2);
+  --color-btn-primary-shadow: 0 0 #0000;
+  --color-btn-primary-inset-shadow: 0 0 #0000;
+  --color-btn-primary-hover-bg: oklch(0.8 0.15 160);
+  --color-btn-primary-hover-border: oklch(0.1 0.02 165 / 0.2);
+  --color-btn-primary-selected-bg: oklch(0.7 0.14 160);
+  --color-btn-primary-selected-shadow: 0 0 #0000;
+  --color-btn-primary-disabled-text: oklch(0.1 0.02 165 / 0.5);
+  --color-btn-primary-disabled-bg: oklch(0.75 0.15 160 / 0.5);
+  --color-btn-primary-disabled-border: oklch(0.1 0.02 165 / 0.2);
+
+  /* --- Overlays & controls --- */
+  --color-action-list-item-default-hover-bg: oklch(0.92 0.005 165 / 0.08);
+  --color-segmented-control-bg: oklch(0.92 0.005 165 / 0.08);
+  --color-segmented-control-button-bg: oklch(0.14 0.02 165); /* --background */
+  --color-segmented-control-button-selected-border: oklch(0.75 0.015 165 / 0.5);
+
+  /* --- Status (callout colors from theme.css) --- */
+  --color-success-fg: oklch(0.72 0.14 160);
+  --color-attention-fg: oklch(0.8 0.15 85);
+  --color-attention-muted: oklch(0.8 0.15 85 / 0.4);
+  --color-attention-subtle: oklch(0.8 0.15 85 / 0.15);
+  --color-danger-fg: oklch(0.75 0.18 28);
+  --color-danger-muted: oklch(0.75 0.18 28 / 0.4);
+  --color-danger-subtle: oklch(0.75 0.18 28 / 0.15);
+
+  --color-primer-shadow-inset: 0 0 #0000;
+
+  /* --- Reactions --- */
+  --color-scale-gray-7: oklch(0.24 0.02 165);
+  --color-scale-blue-8: oklch(0.75 0.15 160 / 0.15);
+
+  /*! Extensions from @primer/css/alerts/flash.scss */
+  --color-social-reaction-bg-hover: var(--color-scale-gray-7);
+  --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-8);
+}
+
+main .pagination-loader-container {
+  background-image: url(https://github.com/images/modules/pulls/progressive-disclosure-line-dark.svg);
+}
+
+main .gsc-loading-image {
+  background-image: url(https://github.githubassets.com/images/mona-loading-dark.gif);
+}

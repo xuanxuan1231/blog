@@ -112,6 +112,10 @@ summary: 文章简介。
 
 必填项留空时不会渲染评论区（开发模式下会显示配置提示）。
 
+评论区使用自定义主题（`public/giscus-theme-light.css` / `public/giscus-theme-dark.css`），颜色与 `src/styles/theme.css` 的站点配色保持一致，并跟随站内亮暗切换。若你在 `theme.css` 中全局替换了色相，这两个文件中的色相也需要一并替换。
+
+giscus 的 iframe 会跨域加载主题样式表（`https://giscus.app`），托管方必须返回 `Access-Control-Allow-Origin` —— Netlify 上由 `public/_headers` 处理。（本地 dev 中 Chromium 可能因 Local Network Access 限制直接拦掉主题请求，外观请在 Netlify 上确认。）
+
 ## 数据分析（Umami）
 
 1. 复制 `.env.example` 为 `.env`

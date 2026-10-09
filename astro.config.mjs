@@ -10,7 +10,16 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   // IMPORTANT: Change this to your deployed site URL
-  site: "https://your-domain.com",
+  site: "https://helloswx.top",
+
+  // giscus loads `public/giscus-theme.css` cross-origin from its iframe
+  // (https://giscus.app), so dev/preview must answer with a CORS header.
+  // On Netlify this is handled by `public/_headers` instead.
+  server: {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
+  },
 
   vite: {
     plugins: [tailwindcss()],

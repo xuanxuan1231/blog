@@ -76,13 +76,22 @@ const showHint =
     );
   }
 
+  // giscus loads the theme as a stylesheet URL from inside its own iframe
+  // (https://giscus.app), so resolve site-relative paths (e.g.
+  // "/giscus-theme-light.css") against the deployed origin.
+  function resolveTheme(theme: string): string {
+    return theme.startsWith("/")
+      ? new URL(theme, window.location.origin).href
+      : theme;
+  }
+
   // Keep the giscus theme in sync with the site's light/dark toggle.
   function syncTheme() {
     const el = giscusContainer();
     const iframe = giscusFrame();
     if (!el || !iframe) return;
     iframe.contentWindow?.postMessage(
-      { giscus: { setConfig: { theme: themeFor(el) } } },
+      { giscus: { setConfig: { theme: resolveTheme(themeFor(el)) } } },
       GISCUS_ORIGIN,
     );
   }
@@ -121,7 +130,7 @@ const showHint =
     script.src = GISCUS_CLIENT;
     script.async = true;
     script.crossOrigin = "anonymous";
-    script.setAttribute("data-theme", themeFor(el));
+    script.setAttribute("data-theme", resolveTheme(themeFor(el)));
 
     for (const [key, value] of Object.entries(el.dataset)) {
       if (!value || INTERNAL_DATASET_KEYS.includes(key)) continue;

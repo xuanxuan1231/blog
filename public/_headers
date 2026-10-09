@@ -1,0 +1,7 @@
+# giscus' iframe (https://giscus.app) loads these theme stylesheets cross-origin
+# (with `crossorigin="anonymous"`), so they must be served with CORS headers.
+/giscus-theme-light.css
+  Access-Control-Allow-Origin: *
+
+/giscus-theme-dark.css
+  Access-Control-Allow-Origin: *

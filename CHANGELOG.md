@@ -7,6 +7,8 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Replace the Artalk comment system with [giscus](https://giscus.app). Configure it in `comments.giscus` in `src/config/site.ts`; `PUBLIC_ARTALK_SERVER` / `PUBLIC_ARTALK_ENABLED` are no longer used.
+- Add custom giscus themes (`public/giscus-theme-light.css` / `public/giscus-theme-dark.css`) so the comment widget matches the site palette from `src/styles/theme.css`.
+- Add custom giscus themes (`public/giscus-theme-light.css` / `public/giscus-theme-dark.css`) that mirror the site palette from `src/styles/theme.css` and follow the site's light/dark toggle. They are served with CORS headers via `public/_headers` (Netlify).
 
 ## 1.1.0 - 2026-04-05
 

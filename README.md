@@ -112,6 +112,10 @@ Comments are powered by [giscus](https://giscus.app), with all data stored in Gi
 
 While the required fields are empty, the comment section stays hidden (a hint is shown in dev mode).
 
+The comment widget uses custom themes (`public/giscus-theme-light.css` / `public/giscus-theme-dark.css`) that mirror the site palette from `src/styles/theme.css`, and follows the site's light/dark toggle. If you change the hue in `theme.css` (find-and-replace), replace it in those two files too.
+
+giscus loads the theme stylesheet cross-origin from its iframe (`https://giscus.app`), so the host must send `Access-Control-Allow-Origin` — `public/_headers` does this on Netlify. (In local dev, Chromium may block the theme request entirely via its Local Network Access restrictions; check the look on Netlify.)
+
 ## Analytics (Umami)
 
 1. Copy `.env.example` to `.env`

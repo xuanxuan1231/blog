@@ -81,10 +81,14 @@ const site = {
       emitMetadata: true,
       inputPosition: "bottom" as const, // data-input-position: "top" | "bottom"
       lang: "zh-CN", // data-lang
-      // data-theme per site theme: built-in name (light, dark, preferred_color_scheme,
-      // noborder_light, noborder_dark, ...) or a custom theme CSS URL
-      lightTheme: "light",
-      darkTheme: "dark",
+      // Theme per site mode. The two stylesheets in `public/` mirror the site
+      // palette from src/styles/theme.css and follow the site's light/dark
+      // toggle. giscus loads them cross-origin from its iframe, hence the CORS
+      // headers in `public/_headers` (Netlify). Built-in giscus theme names
+      // (light, dark, preferred_color_scheme, ...) or external `https://` theme
+      // URLs also work here.
+      lightTheme: "/giscus-theme-light.css",
+      darkTheme: "/giscus-theme-dark.css",
     },
   },
 
